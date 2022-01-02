@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+Project Console: https://console.firebase.google.com/project/fir-react-example-2e0bd/overview
+Hosting URL: https://fir-react-example-2e0bd.web.app
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
