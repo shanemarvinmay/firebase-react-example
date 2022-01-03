@@ -105,3 +105,8 @@ dist
 
 # VS Code workspace file
 .DS_Store
+
+# Logs
+*.chunk.js
+*.chunk.js.map
+*.js.map
