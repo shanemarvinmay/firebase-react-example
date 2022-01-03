@@ -4,6 +4,9 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import AddIcon from '@mui/icons-material/Add';
+import CodeIcon from '@mui/icons-material/Code';
+import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -49,9 +52,9 @@ export default function BasicTabs() {
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Add" {...a11yProps(0)} />
-          <Tab label="Data" {...a11yProps(1)} />
-          <Tab label="Graph" {...a11yProps(2)} />
+          <Tab icon={<AddIcon />}  label="Add" {...a11yProps(0)} />
+          <Tab icon={<CodeIcon />} label="Data" {...a11yProps(1)} />
+          <Tab icon={<AutoGraphIcon />} label="Graph" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
