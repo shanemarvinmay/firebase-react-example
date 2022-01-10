@@ -6,6 +6,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import * as _auth from "firebase/auth";
 import { GoogleAuthProvider, signInWithPopup, getRedirectResult, signInWithRedirect } from "firebase/auth";
+import WaterGraph from './components/WaterGraph';
 /**
  * for(const property in _auth) {
  * console.log(property);
@@ -160,6 +161,7 @@ function App() {
   return (
     <div>
       <BasicTabs />
+      <WaterGraph />
     </div>
   );
 }
