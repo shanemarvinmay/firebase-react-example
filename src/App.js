@@ -1,12 +1,13 @@
 import './App.css';
 import BasicTabs from './components/BasicTabs';
-import React from 'react';
+import React, { useState } from 'react';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import * as _auth from "firebase/auth";
 import { GoogleAuthProvider, signInWithPopup, getRedirectResult, signInWithRedirect } from "firebase/auth";
 import WaterGraph from './components/WaterGraph';
+import AuthForm from './components/AuthForm';
 /**
  * for(const property in _auth) {
  * console.log(property);
@@ -156,12 +157,20 @@ console.log("auth['currentUser']");
 console.log(auth['currentUser']);
 
 function App() {
+  const [isAuth, setIsAuth] = useState(false);
   console.log('app');
   console.log(app);
+  if (isAuth) {
+    return (
+      <div>
+        <BasicTabs />
+        <WaterGraph />
+      </div>
+    );
+  }
   return (
     <div>
-      <BasicTabs />
-      <WaterGraph />
+      <AuthForm func={(value) => setIsAuth(value)} value={isAuth} />
     </div>
   );
 }
